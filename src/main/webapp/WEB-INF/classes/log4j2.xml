@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <Properties>
+        <Property name="layout">%d [%t] %-5p %c %m%n></Property>
+    </Properties>
+
+    <Appenders>
+        <RollingFile name="LOCALHOST"
+                     fileName="C:\Users\romam\dev_mk\apache-tomcat-9.0.65/logs/servlet_logs.log"
+                     filePattern="logs/localhost.%d{yyyy-MM-dd}-%i.log">
+
+
+            <PatternLayout pattern="${layout}" />
+                <Polices>
+                    <TimeBasedTriggeringPolicy />
+                    <SizeBasedTriggeringPolicy size="1 MB" />
+                </Polices>
+            <DefaultRolloverStratagy max="10" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="ALL">
+            <AppenderRef ref="LOCALHOST"/>
+        </Root>
+    </Loggers>
+</Configuration>

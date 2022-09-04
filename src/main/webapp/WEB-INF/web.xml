@@ -1,0 +1,39 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <!--это имя отображается в Tomcat-->
+  <display-name>Archetype Created Web Application Tomcat</display-name>
+  
+  <servlet>
+    <servlet-name>HelloWorldServlet</servlet-name>
+    <servlet-class>dev.romamk.tomcat.servlet.HelloWorldServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>RequestInfoServlet</servlet-name>
+    <servlet-class>dev.romamk.tomcat.servlet.RequestInfoServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>dev.romamk.tomcat.servlet.SessionServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>HelloWorldServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>RequestInfoServlet</servlet-name>
+    <url-pattern>/info/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <url-pattern>/session/*</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
